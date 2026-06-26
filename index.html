@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed Horizontal</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="feed-card">
+        <header class="feed-header">
+          <div class="user-info">
+            <div class="avatar">📷</div>
+            <div>
+              <h1>@seuusuario</h1>
+              <p>Stories em formato horizontal</p>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button id="expand-btn" class="icon-btn" aria-label="Expandir imagem">⤢</button>
+          </div>
+        </header>
+
+        <div class="viewport">
+          <button class="nav-btn prev" id="prev-btn" aria-label="Imagem anterior">‹</button>
+          <div id="carousel-track" class="carousel-track"></div>
+          <button class="nav-btn next" id="next-btn" aria-label="Próxima imagem">›</button>
+          <div id="counter" class="counter-badge">0/0</div>
+        </div>
+
+        <footer class="feed-footer">
+          <div class="footer-meta">
+            <div class="dots" id="dots"></div>
+          </div>
+          <div class="actions">
+            <button class="icon-btn" aria-label="Curtir">❤</button>
+            <button class="icon-btn" aria-label="Comentar">💬</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <div id="image-modal" class="image-modal" aria-hidden="true">
+      <div class="modal-toolbar">
+        <button id="zoom-out" class="zoom-btn" aria-label="Diminuir zoom">−</button>
+        <button id="zoom-in" class="zoom-btn" aria-label="Aumentar zoom">+</button>
+        <button id="close-modal" class="close-modal" aria-label="Fechar imagem">✕</button>
+      </div>
+      <div class="modal-stage">
+        <img id="modal-image" src="" alt="Imagem expandida" />
+      </div>
+    </div>
+
+    <script src="./images-data.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
